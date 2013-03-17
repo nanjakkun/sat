@@ -8,6 +8,9 @@ scalacOptions ++= Seq("-feature")
 
 libraryDependencies += "org.scalatest" % "scalatest_2.10" % "1.9.1" % "test"
 
+unmanagedSourceDirectories in Compile <<= Seq(scalaSource in Compile).join
+
+unmanagedSourceDirectories in Test <<= Seq(scalaSource in Test).join
 
 
 
